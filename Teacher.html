@@ -167,7 +167,7 @@
                 google_logout() {
                     if (confirm("คุณแน่ใจหรือไม่?")) {
                         firebase.auth().signOut().then(() => {
-                            window.location.href = '/ProjectFinal_vue.html';
+                            window.location.href = '/index.html';
                         }).catch((error) => {
                             console.log("เกิดข้อผิดพลาดในการออกจากระบบ:", error);
                         });
