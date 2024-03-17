@@ -62,12 +62,12 @@
                             db.collection("student").where("email", "==", user.email).get()
                                 .then((querySnapshot) => {
                                     if (!querySnapshot.empty) {
-                                        window.location.href = '/Student.html';
+                                        window.location.href = '/student.html';
                                     } else {
                                         db.collection("teacher").where("email", "==", user.email).get()
                                             .then((querySnapshot) => {
                                                 if (!querySnapshot.empty) {
-                                                    window.location.href = '/Teacher.html';
+                                                    window.location.href = '/teacher.html';
                                                 }
                                             })
                                     }
