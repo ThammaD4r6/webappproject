@@ -10,20 +10,51 @@
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 </head>
+<style>
+    .login-btn {
+        background-color: #2196F3;
+        /* เปลี่ยนสีพื้นหลัง */
+        color: #FFFFFF;
+        /* เปลี่ยนสีของข้อความ */
+        transition: background-color 0.3s ease;
+        /* เพิ่มเอฟเฟกต์ transition เมื่อ hover */
+    }
+
+    .logout-btn {
+        background-color: #2196F3;
+        /* เปลี่ยนสีพื้นหลัง */
+        color: #FFFFFF;
+        /* เปลี่ยนสีของข้อความ */
+        transition: background-color 0.3s ease;
+        /* เพิ่มเอฟเฟกต์ transition เมื่อ hover */
+    }
+
+    .login-btn:hover {
+        background-color: #0D47A1;
+        /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+        
+    }
+</style>
+
 
 <body>
     <div id="app">
         <v-app>
             <v-container>
-                <v-card>
-                    <v-card-title class="bg-blue-grey">{{ title }}</v-card-title>
+                <v-card style="background-image: url('Work1_Picture/suo.png'); background-size: cover;">
+                    <v-card-title class="bg-blue-grey" style="text-align: center;">{{ title }}</v-card-title>
                     <v-card-text class="pa-6">
                         <v-card-actions>
-                            <v-btn @click="google_login()" v-if="!user" class="mx-auto">Login</v-btn> <br>
-                            <v-btn @click="google_logout()" v-if="user" class="mx-auto">Logout</v-btn>
+                            <v-btn @click="google_login()" v-if="!user" class="mx-auto login-btn">Login</v-btn>
+                            <v-btn @click="google_logout()" v-if="user" class="mx-auto logout-btn">Logout</v-btn>
                         </v-card-actions>
                     </v-card-text>
+                    <v-img src="Work1_Picture/blangdmire.png" aspect-ratio="4.5"></v-img><br>
+                    <v-img src="Work1_Picture/blangdmirescy.png" aspect-ratio="4.5"></v-img><br>
                 </v-card>
+                
+
+
                 <div class="pa-6 text-center">{{ footer }}</div>
             </v-container>
         </v-app>
